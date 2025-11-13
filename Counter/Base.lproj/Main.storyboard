@@ -32,13 +32,14 @@
                                     </imageReference>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="removeButton" destination="BYZ-38-t0r" eventType="touchDown" id="V4q-Be-t15"/>
+                                    <action selector="didPressMinusButton" destination="BYZ-38-t0r" eventType="touchDown" id="JS0-ol-fkc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DF-kt-Lj1">
                                 <rect key="frame" x="212" y="718" width="169" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large" renderingMode="hierarchical">
@@ -48,9 +49,10 @@
                                             <color systemColor="tertiaryLabelColor"/>
                                         </hierarchicalColors>
                                     </imageReference>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addButton" destination="BYZ-38-t0r" eventType="touchDown" id="mCE-yU-bb4"/>
+                                    <action selector="didPressPlusButton" destination="BYZ-38-t0r" eventType="touchDown" id="29t-Fy-7XW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSa-zN-UW3">
@@ -68,7 +70,7 @@
                                     </imageReference>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="zeroButton" destination="BYZ-38-t0r" eventType="touchDown" id="hrW-gM-OT6"/>
+                                    <action selector="didPressCleanButton" destination="BYZ-38-t0r" eventType="touchDown" id="rj1-Ne-0XX"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="История изменений:" translatesAutoresizingMaskIntoConstraints="NO" id="BtH-JA-vva">

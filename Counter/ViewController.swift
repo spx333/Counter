@@ -11,13 +11,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak private var resultLabel: UILabel!
     
-    @IBOutlet weak var logsTextView: UITextView!
+    @IBOutlet weak private var logsTextView: UITextView!
     
-    var result: Int = 0
+    private var result: Int = 0
 
-    let dateFormatter = DateFormatter()
+    private let dateFormatter = DateFormatter()
 
   
    
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     
-    func scrollTextViewToBottom() {
+    private func scrollTextViewToBottom() {
         if logsTextView.text.count > 0 {
                let location = logsTextView.text.count - 1
                let bottom = NSMakeRange(location, 1)
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func zeroButton() {
+    @IBAction private func didPressCleanButton() {
         let date = Date()
         result=0
         resultLabel.text = "Значение счётчика: \(result)"
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         scrollTextViewToBottom()
     }
     
-    @IBAction func removeButton() {
+    @IBAction private func didPressMinusButton() {
         let date = Date()
         if result>0 {
             result-=1
@@ -58,8 +58,9 @@ class ViewController: UIViewController {
         resultLabel.text = "Значение счётчика: \(result)"
         
     }
+  
     
-    @IBAction func addButton() {
+    @IBAction private func didPressPlusButton() {
         let date = Date()
         result+=1
         resultLabel.text = "Значение счётчика: \(result)"
